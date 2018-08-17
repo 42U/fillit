@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 06:47:24 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/09 06:48:59 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/16 20:09:12 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_place_ju(char c)
 {
 	g_square[g_i][g_j] = c;
-	g_square[g_i][g_j + 1] = c;
 	g_square[g_i + 1][g_j] = c;
-	g_square[g_i + 2][g_j] = c;
+	g_square[g_i + 1][g_j + 1] = c;
+	g_square[g_i + 1][g_j + 2] = c;
 }
