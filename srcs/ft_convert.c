@@ -1,88 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   ft_convert.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 23:57:31 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 21:22:59 by issmith          ###   ########.fr       */
+/*   Created: 2018/08/16 20:42:29 by issmith           #+#    #+#             */
+/*   Updated: 2018/08/16 21:33:54 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** this is where the solving and recursion happen
-*/
-
-void		fillit(int *g_order, int flag)
+void	ft_convert(char **alph)
 {
-	int end;
+	int i;
 
-	end = 0;
-	while (!end) 
+	i = 0;
+	while (alph[i])
 	{
-		g_base += 1;
-		ft_need_rm();
-		end = ft_solve(g_order, flag);
-		if (end)
-			ft_print_arr();
-		g_flag = 1;
+		g_k = 0;
+		while (ft_compare(alph[i], g_strs[g_k]) != 0)
+			g_k++;
+		g_order[i] = g_k;
+		i++;
 	}
+	free(alph);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

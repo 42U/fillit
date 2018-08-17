@@ -1,88 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   ft_piece_ten.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 23:57:31 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 21:22:59 by issmith          ###   ########.fr       */
+/*   Created: 2018/08/05 17:54:17 by issmith           #+#    #+#             */
+/*   Updated: 2018/08/16 16:53:02 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** this is where the solving and recursion happen
+** define S_Q
 */
 
-void		fillit(int *g_order, int flag)
+int		ft_piece_ten()
 {
-	int end;
+	int k;
 
-	end = 0;
-	while (!end) 
-	{
-		g_base += 1;
-		ft_need_rm();
-		end = ft_solve(g_order, flag);
-		if (end)
-			ft_print_arr();
-		g_flag = 1;
-	}
+	k = 0;
+	if (g_square[g_i][g_j] == '.')
+		k++;
+	if (g_square[g_i][g_j + 1] == '.' && g_j + 1 < g_base)
+		k++;
+	if (g_square[g_i + 1][g_j] == '.' && g_i + 1 < g_base)
+		k++;
+	if (g_square[g_i + 1][g_j + 1] == '.' &&
+			g_i + 1 < g_base && g_j + 1 < g_base)
+		k++;
+	if (k == 4)
+		return (1);
+	else
+		return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

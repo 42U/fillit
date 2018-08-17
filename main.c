@@ -28,13 +28,16 @@ int		main(int file_count, char **input)
 		g_pcs = x;
 		alph = ft_init(&str, x);
 		if (alph != NULL)
-			fillit(alph, flag);
+		{
+			ft_convert(alph);
+			fillit(g_order, flag);
+		}
 	}
 	else
 		ft_error_msg(1);
 	free(g_strs);
 	free(g_square);
-	free(alph);
+//	free(alph);
     tend = clock();                                                     // FTO     
     cpu_time_used = ((double) (tend - start)) / CLOCKS_PER_SEC;        // FTO
 	printf("%s%f%s", "\n the program ran in: ", cpu_time_used, " seconds\n\n");                                      // For Testing Only

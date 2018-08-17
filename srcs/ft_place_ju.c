@@ -1,88 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.c                                           :+:      :+:    :+:   */
+/*   ft_place_ju.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 23:57:31 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 21:22:59 by issmith          ###   ########.fr       */
+/*   Created: 2018/08/09 06:47:24 by issmith           #+#    #+#             */
+/*   Updated: 2018/08/16 20:09:12 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** this is where the solving and recursion happen
-*/
-
-void		fillit(int *g_order, int flag)
+void	ft_place_ju(char c)
 {
-	int end;
-
-	end = 0;
-	while (!end) 
-	{
-		g_base += 1;
-		ft_need_rm();
-		end = ft_solve(g_order, flag);
-		if (end)
-			ft_print_arr();
-		g_flag = 1;
-	}
+	g_square[g_i][g_j] = c;
+	g_square[g_i + 1][g_j] = c;
+	g_square[g_i + 1][g_j + 1] = c;
+	g_square[g_i + 1][g_j + 2] = c;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

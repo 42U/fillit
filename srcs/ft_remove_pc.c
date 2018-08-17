@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 01:50:18 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 16:12:42 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/16 21:25:59 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_remove_pc(int nb)
 }
 */
 
-void	ft_remove_pc(int *g_order, int flag)
+void	ft_remove_pc(void)
 {
 	int i;
 	int j;

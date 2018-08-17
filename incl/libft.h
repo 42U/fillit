@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 17:23:02 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/16 21:25:54 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,10 @@ void				ft_control(char **alph, int flag, int end);
 void				ft_create_square(size_t size);
 void				ft_control(char **alph, int flag, int end);
 void				ft_print_arr(void);
-int					ft_solve(char **alph,int flag);
+int					ft_solve(int *g_order, int flag);
 int					ft_check_next(char *str);
 int					ft_fill_basic(char **alph, int flag);
-int					ft_pc_fit(char *str);
+int					ft_pc_fit(int g_k);
 void				ft_place_pc(char *str, int i);
 int					ft_piece_zero(void);
 int					ft_piece_one(void);
@@ -121,12 +121,12 @@ void				ft_place_trtl(char c, int nb);
 void				ft_place_zldr(char c, int nb);
 void				ft_place_zull(char c, int nb);
 void				ft_order_alph(int *g_order, int g_inc);
-void				ft_remove_pc(int *g_order, int nb);
+void				ft_remove_pc(void);
 void				ft_move_pc(char *str, int let);
 int					ft_char_str(char *str, char c);
 void				ft_count_spc(void);
-void				fillit(char **alph, int flag);
-
+void				fillit(int *g_order, int flag);
+void				ft_convert(char **alph);
 
 extern int			g_order[]; // order of the pieces by int
 extern char 		**g_strs;  // cpy of the pcs in string form
