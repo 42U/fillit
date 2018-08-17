@@ -1,0 +1,1 @@
+gcc place/ft_*.c  pieces/ft_*.c srcs/ft_*.c main.c

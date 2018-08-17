@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.h                                           :+:      :+:    :+:   */
+/*   ft_which_pc2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/05 16:44:12 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 16:31:15 by issmith          ###   ########.fr       */
+/*   Created: 2018/08/05 21:19:40 by issmith           #+#    #+#             */
+/*   Updated: 2018/08/05 21:24:39 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILLIT_H
-# define FILLIT_H
+#include "libft.h"
 
-int			g_order[26];
-char		**g_strs;
-char		**g_square;
-int			g_i = -1;
-int			g_j = -1;
-int			g_x = -1;
-int			g_y = -1;
-int			g_base = 1;
-int			g_pcs = 0;
-int			g_k = 0;
-int			g_inc = 0;
-int			g_flag = 0;
-char		g_char = 0;
-int			g_nbr = 0;
-int			g_max = 0;
-int			g_si = 0;
-int			g_count = 0;
-
-#endif
+int		ft_which_pc2(int nb)
+{
+	if (nb == 11)
+		return (ft_piece_elev());
+	if (nb == 12)
+		return (ft_piece_twel());
+	if (nb == 13)
+		return (ft_piece_thir());
+	if (nb == 14)
+		return (ft_piece_fote());
+	if (nb == 15)
+		return (ft_piece_fift());
+	if (nb == 16)
+		return (ft_piece_sixt());
+	if (nb == 17)
+		return (ft_piece_sevt());
+	if (nb == 18)
+		return (ft_piece_eitt());
+	return (0);
+}
