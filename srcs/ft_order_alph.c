@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 07:17:44 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 19:50:13 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/16 23:15:52 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ void	ft_order_alph(int *g_order, int g_inc)
 			ft_place_jdlr(c, g_order[g_inc]);
 	else if (g_order[g_inc] == 18)
 			ft_place_ju(c);
-	g_inc++;
 }

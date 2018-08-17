@@ -6,7 +6,7 @@
 #    By: issmith <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/16 19:52:51 by issmith           #+#    #+#              #
-#    Updated: 2018/08/16 21:29:38 by issmith          ###   ########.fr        #
+#    Updated: 2018/08/16 23:03:24 by issmith          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ fclean:	clean
 
 re: fclean all
 
-dbg:
+dbg: clean
 	$(CC) $(DB) $(SRCS) $(LN) $(MN) $(INCL)
 	
 test:
