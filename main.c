@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/19 15:29:33 by issmith           #+#    #+#             */
+/*   Updated: 2018/08/19 15:29:36 by issmith          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <time.h>
-#include <stdio.h>
 
 int		main(int file_count, char **input)
 {
@@ -8,9 +18,7 @@ int		main(int file_count, char **input)
 	char	*str;
 	int		flag;
 	int		end;
-	int		x;
 
-	x = 0;
 	end = 0;
 	flag = 0;
 	alph = NULL;
@@ -18,9 +26,8 @@ int		main(int file_count, char **input)
 		ft_error_msg(2);
 	if (ft_read_file(input[1], &str) == 0)
 	{
-		x = ft_pcs(str);
-		g_pcs = x;
-		alph = ft_init(str, x);
+		g_pcs = ft_pcs(str);
+		alph = ft_init(str, g_pcs);
 		if (alph != NULL)
 		{
 			ft_convert(alph);
