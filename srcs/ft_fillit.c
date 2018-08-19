@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/14 23:57:31 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 04:05:21 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 06:49:24 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 ** this is where the solving and recursion happen
 */
 
-void		fillit(int *g_order, int flag)
+void	fillit(int *g_order, int flag)
 {
 	int end;
 
 	end = 0;
-	while (!end) 
+	while (!end)
 	{
 		g_base += 1;
 		ft_need_rm();
@@ -31,58 +31,3 @@ void		fillit(int *g_order, int flag)
 		g_flag = 1;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

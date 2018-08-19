@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 04:45:27 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:03:09 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,13 @@
 
 typedef	struct		s_piece
 {
-	int				x;
-	int				y;
-	char			c;
+	int				i;
+	int				line;
+	int				hash;
+	int				c;
 	int				*tets;
 //	struct s_piece	*next;
-}					t_piece;
+}					t_reg;
 
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -67,12 +68,12 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
-char				**ft_init(char **str, int x);
+char				**ft_init(char *str, int x);
 int					ft_read_file(char *input, char **str);
-int					ft_check_valid(char **str);
+int					ft_check_valid(char *str, int line, int hash);
 void				ft_check_help(char **tmp, int *i, int *c, int *hash);
 int					ft_pcs(char *str);
-int					ft_make_tmp(char ***tmp, char *str, int x);
+int					ft_make_tmp(char ***tmp, char *str, int x, int k);
 char				*ft_what_one(char *str, int i);
 char				*ft_what_three(char *str, int i);
 char				*ft_what_two(char *str, int i);

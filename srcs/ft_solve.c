@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 05:15:27 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 04:58:41 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:35:45 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int		ft_solve(int *g_order, int flag, int pcs)
 {
-	int i;
-	int j;
-	char c;
+	int		i;
+	int		j;
+	char	c;
 
 	c = 65 + flag;
 	if (!pcs)

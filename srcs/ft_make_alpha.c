@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:16:42 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/05 22:11:44 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 06:52:12 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_make_alpha(char ***arr, char ***tmp, int x)
 {
 	int		i;
 	int		j;
-	
+
 	g_char = 64;
 	i = 0;
 	arr[0] = (char **)ft_memalloc(x + 1);

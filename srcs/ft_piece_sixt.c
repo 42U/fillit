@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 19:46:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 00:29:55 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:30:54 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_piece_sixt(int i, int j)
 		k++;
 	if (i + 2 < g_base && g_square[i + 2][j] == '.')
 		k++;
-	if (i + 3 < g_base && g_square[i + 2][j +1] == '.')
+	if (i + 3 < g_base && g_square[i + 2][j + 1] == '.')
 		k++;
 	if (k == 4)
 		return (1);

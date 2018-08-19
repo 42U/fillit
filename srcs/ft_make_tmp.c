@@ -6,17 +6,40 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/30 04:51:59 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 17:25:22 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 09:35:11 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_make_tmp(char ***tmp, char *str, int x)
+void	ft_find_ht(char *str, int *i)
+{
+	while (str[*i] != '#')
+		*i += 1;
+}
+
+void	ft_inc_ft(int *j, int *x)
+{
+	*j += 1;
+	*x -= 1;
+}
+
+void	ft_next_pc(char *str, int *i, int *k)
+{
+	while (*k < 4 && *k > 0)
+	{
+		*i += 1;
+		if (str[*i] == '#')
+			*k += 1;
+		if (*k == 4)
+			*i += 1;
+	}
+}
+
+int		ft_make_tmp(char ***tmp, char *str, int x, int k)
 {
 	int		i;
 	int		j;
-	int		k;
 
 	tmp[0] = (char **)malloc(sizeof(char *) * (x + 1));
 	i = 0;
@@ -24,8 +47,7 @@ int		ft_make_tmp(char ***tmp, char *str, int x)
 	while (x > 0)
 	{
 		k = 0;
-		while (str[i] != '#')
-			i++;
+		ft_find_ht(str, &i);
 		if (str[i] == '#' && x > 0)
 		{
 			k++;
@@ -36,19 +58,9 @@ int		ft_make_tmp(char ***tmp, char *str, int x)
 			if (tmp[0][j] == NULL)
 				return (-1);
 			else
-			{
-				j++;
-				x--;
-			}
+				ft_inc_ft(&j, &x);
 		}
-		while (k < 4 && k > 0)
-		{
-			i++;
-			if (str[i] == '#')
-				k++;
-			if (k == 4)
-				i++;
-		}
+		ft_next_pc(str, &i, &k);
 	}
 	return (0);
 }

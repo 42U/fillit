@@ -6,42 +6,19 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 01:50:18 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 04:45:42 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:35:21 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	ft_remove_pc(int nb)
-{
-	int pc;
-
-	pc = -1;
-	pc = g_order[nb];
-	if (pc >= 0 && pc <= 2)
-		ft_place_zldr('.', pc);
-	else if (pc >= 3 && pc <= 5)
-		ft_place_zull('.', pc);
-	else if (pc >= 6 && pc <= 8)
-		ft_place_lrds('.', pc);
-	else if (pc >= 9 && pc <= 11)
-		ft_place_flsq('.', pc);
-	else if (pc >= 12 && pc <= 14)
-		ft_place_trtl('.', pc);
-	else if (pc >= 15 && pc <= 17)
-		ft_place_jdlr('.', pc);
-	else if (pc == 18)
-		ft_place_ju('.');
-}
-*/
 
 void	ft_remove_pc(int flag)
 {
-	int i;
-	int j;
-	char c;
+	int		i;
+	int		j;
+	char	c;
 
-	c = 65 + flag;;
+	c = 65 + flag;
 	i = -1;
 	while (++i < g_base)
 	{

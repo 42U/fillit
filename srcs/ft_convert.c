@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 20:42:29 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 03:22:20 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 06:22:40 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_convert(char **alph)
 {
 	int i;
-	t_piece piece;
 
 	i = 0;
 	while (alph[i])
@@ -26,6 +25,5 @@ void	ft_convert(char **alph)
 		g_order[i] = g_k;
 		i++;
 	}
-	piece.tets = g_order;
 	free(alph);
 }

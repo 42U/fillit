@@ -6,7 +6,7 @@
 /*   By: jxie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 10:33:02 by jxie              #+#    #+#             */
-/*   Updated: 2018/08/16 20:16:46 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 06:47:57 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_create_square(size_t size)
 {
-	size_t i; 
+	size_t i;
 	size_t j;
 
 	g_square = (char **)ft_memalloc((size) * (size) + 1);

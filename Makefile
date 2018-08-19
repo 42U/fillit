@@ -6,7 +6,7 @@
 #    By: issmith <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/16 19:52:51 by issmith           #+#    #+#              #
-#    Updated: 2018/08/19 05:06:55 by issmith          ###   ########.fr        #
+#    Updated: 2018/08/19 09:38:22 by issmith          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ AR = ar rc
 RL = ranlib
 RM = /bin/rm -rf
 
-.PHONY: clean fclean re beta gg test lib dbg
+.PHONY: make clean fclean re beta gg test lib dbg
 
 all: $(NAME)
 
@@ -47,7 +47,7 @@ lib:
 	$(RM) $(OBJ)
 
 clean:
-	$(RM) $(OBJ) a.out*
+	$(RM) $(OBJ) a.out* $(NAME)
 
 fclean:	clean
 	$(RM) $(LN) a.out
@@ -75,5 +75,3 @@ gg:
 	$(CC) $(FLAG) $(LN) $(MN)
 
 ctd: clean dbg
-
-

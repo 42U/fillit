@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 19:29:55 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 00:41:31 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:31:57 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_piece_twel(int i, int j)
 		k++;
 	if (i + 1 < g_base && g_square[i + 1][j] == '.')
 		k++;
-	if (i + 1 < g_base && j + 1 < g_base &&	g_square[i + 1][j + 1] == '.')
+	if (i + 1 < g_base && j + 1 < g_base && g_square[i + 1][j + 1] == '.')
 		k++;
 	if (i + 2 < g_base && g_square[i + 2][j] == '.')
 		k++;

@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 17:42:20 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 00:30:47 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:29:03 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** define L_D
 */
 
-int		ft_piece_seven(int  i, int j)
+int		ft_piece_seven(int i, int j)
 {
 	int k;
 

@@ -6,13 +6,13 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 02:52:59 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 04:34:04 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:33:31 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_arr()
+void	ft_print_arr(void)
 {
 	int i;
 	int j;

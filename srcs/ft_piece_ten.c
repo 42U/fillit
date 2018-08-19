@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 17:54:17 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 00:40:18 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 07:31:22 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_piece_ten(int i, int j)
 		k++;
 	if (i + 1 < g_base && g_square[i + 1][j] == '.')
 		k++;
-	if (i + 1 < g_base && j + 1 < g_base &&	g_square[i + 1][j + 1] == '.')
+	if (i + 1 < g_base && j + 1 < g_base && g_square[i + 1][j + 1] == '.')
 		k++;
 	if (k == 4)
 		return (1);
