@@ -6,7 +6,7 @@
 #    By: issmith <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/16 19:52:51 by issmith           #+#    #+#              #
-#    Updated: 2018/08/16 23:03:24 by issmith          ###   ########.fr        #
+#    Updated: 2018/08/19 05:06:55 by issmith          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ $(NAME):
 	$(CC) $(CFLAGS) $(SRCS) $(INCL)
 	$(AR) $(LN) $(OBJ)
 	$(RL) $(LN)
-
+	$(RM) $(OBJ)
+	$(CC) $(FLAG) $(INCL) $(LN) $(MN) -o $(NAME)
+	
 lib:
 	$(CC) $(CFLAGS) $(SRCS) $(INCL)
 	$(AR) $(LN) $(OBJ)
