@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 19:26:57 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/17 00:10:00 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 00:34:50 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,18 @@
 ** define T_U
 */
 
-int		ft_piece_elev()
+int		ft_piece_elev(int i, int j)
 {
 	int k;
 
 	k = 0;
-	if (g_j + 1 < g_base && g_square[g_i][g_j + 1] == '.')
+	if (j + 1 < g_base && g_square[i][j + 1] == '.')
 		k++;
-	if (g_i + 1 < g_base && g_square[g_i + 1][g_j] == '.')
+	if (i + 1 < g_base && g_square[i + 1][j] == '.')
 		k++;
-	if (g_i + 1 < g_base && g_j + 1 < g_base &&
-			g_square[g_i + 1][g_j + 1] == '.')
+	if (i + 1 < g_base && j + 1 < g_base &&	g_square[i + 1][j + 1] == '.')
 		k++;
-	if (g_i + 1 < g_base && g_j + 2 < g_base &&
-			g_square[g_i + 1][g_j + 2] == '.')
+	if (i + 1 < g_base && j + 2 < g_base &&	g_square[i + 1][j + 2] == '.')
 		k++;
 	if (k == 4)
 		return (1);

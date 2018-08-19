@@ -6,34 +6,36 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 05:15:27 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/17 01:24:53 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 04:04:33 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "fillit.h"
 
-int		ft_solve(int *g_order, int flag)
+int		ft_solve(int *g_order, int flag, int pcs)
 {
+	int i;
+	int j;
+
 	g_char = 65 + flag;
-	if (!g_pcs)
+	if (!pcs)
 		return (1);
-	g_i = -1;
-	while (++g_i < g_base)
+	i = -1;
+	while (++i < g_base)
 	{
-		g_j = -1;
-		while (++g_j < g_base)
+		j = -1;
+		while (++j < g_base)
 		{
-			if (ft_pc_fit(g_order[flag]))
+			if (ft_pc_fit(g_order[flag], i, j))
 			{
-				ft_order_alph(g_order, flag);
+				ft_order_alph(g_order, flag, i, j);
 				ft_print_arr();
 				ft_putchar('\n');
-				g_pcs--;
-				if (ft_solve(g_order, flag + 1))
+				if (ft_solve(g_order, flag + 1, pcs - 1))
 					return (1);
 				ft_remove_pc();
-				g_pcs++;
+				pcs++;
 			}
 		}
 	}

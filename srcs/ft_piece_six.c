@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 17:40:30 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/17 00:16:39 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 00:29:06 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,18 @@
 ** define L_R
 */
 
-int		ft_piece_six()
+int		ft_piece_six(int i, int j)
 {
 	int k;
 
 	k = 0;
-	if (g_square[g_i][g_j] == '.')
+	if (g_square[i][j] == '.')
 		k++;
-	if (g_j + 1 < g_base && g_square[g_i][g_j + 1] == '.')
+	if (j + 1 < g_base && g_square[i][j + 1] == '.')
 		k++;
-	if (g_i + 1 < g_base && g_j + 1 < g_base &&
-			g_square[g_i + 1][g_j + 1] == '.')
+	if (i + 1 < g_base && j + 1 < g_base &&	g_square[i + 1][j + 1] == '.')
 		k++;
-	if (g_i + 2 < g_base && g_j + 1 < g_base &&
-			g_square[g_i + 2][g_j + 1] == '.')
+	if (i + 2 < g_base && j + 1 < g_base && g_square[i + 2][j + 1] == '.')
 		k++;
 	if (k == 4)
 		return (1);

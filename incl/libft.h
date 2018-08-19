@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 21:25:54 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 03:25:31 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ typedef	struct		s_piece
 	int				x;
 	int				y;
 	char			c;
-	int				data;
-	struct s_piece	*next;
+	int				*tets;
+//	struct s_piece	*next;
 }					t_piece;
 
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -82,45 +82,45 @@ void				ft_control(char **alph, int flag, int end);
 void				ft_create_square(size_t size);
 void				ft_control(char **alph, int flag, int end);
 void				ft_print_arr(void);
-int					ft_solve(int *g_order, int flag);
+int					ft_solve(int *g_order, int flag, int pcs);
 int					ft_check_next(char *str);
 int					ft_fill_basic(char **alph, int flag);
-int					ft_pc_fit(int g_k);
+int					ft_pc_fit(int g_k, int i, int j);
 void				ft_place_pc(char *str, int i);
-int					ft_piece_zero(void);
-int					ft_piece_one(void);
-int					ft_piece_two(void);
-int					ft_piece_three(void);
-int					ft_piece_four(void);
-int					ft_piece_five(void);
-int					ft_piece_six(void);
-int					ft_piece_seven(void);
-int					ft_piece_eight(void);
-int					ft_piece_nine(void);
-int					ft_piece_ten(void);
-int					ft_piece_elev(void);
-int					ft_piece_twel(void);
-int					ft_piece_thir(void);
-int					ft_piece_fote(void);
-int					ft_piece_fift(void);
-int					ft_piece_sixt(void);
-int					ft_piece_sevt(void);
-int					ft_piece_eitt(void);
-int					ft_which_pc(int nb);
-int					ft_which_pc2(int nb);
+int					ft_piece_zero(int i, int j);
+int					ft_piece_one(int i, int j);
+int					ft_piece_two(int i, int j);
+int					ft_piece_three(int i, int j);
+int					ft_piece_four(int i, int j);
+int					ft_piece_five(int i, int j);
+int					ft_piece_six(int i, int j);
+int					ft_piece_seven(int i, int j);
+int					ft_piece_eight(int i, int j);
+int					ft_piece_nine(int i, int j);
+int					ft_piece_ten(int i, int j);
+int					ft_piece_elev(int i, int j);
+int					ft_piece_twel(int i, int j);
+int					ft_piece_thir(int i, int j);
+int					ft_piece_fote(int i, int j);
+int					ft_piece_fift(int i, int j);
+int					ft_piece_sixt(int i, int j);
+int					ft_piece_sevt(int i, int j);
+int					ft_piece_eitt(int i, int j);
+int					ft_which_pc(int nb, int i, int j);
+int					ft_which_pc2(int nb, int i, int j);
 void				ft_g_strs(void);
 int					ft_compare(const char *s1, const char *s2);
 void				ft_need_rm(void);
 void				ft_handle_pc(char *str, int i, int flag);
 char				*ft_strrev(char *str);
-void				ft_place_flsq(char c, int nb);
-void				ft_place_jdlr(char c, int nb);
-void				ft_place_ju(char c);
-void				ft_place_lrds(char c, int nb);
-void				ft_place_trtl(char c, int nb);
-void				ft_place_zldr(char c, int nb);
-void				ft_place_zull(char c, int nb);
-void				ft_order_alph(int *g_order, int g_inc);
+void				ft_place_flsq(char c, int nb, int i, int j);
+void				ft_place_jdlr(char c, int nb, int i, int j);
+void				ft_place_ju(char c, int i, int j);
+void				ft_place_lrds(char c, int nb, int i, int j);
+void				ft_place_trtl(char c, int nb, int i, int j);
+void				ft_place_zldr(char c, int nb, int i, int j);
+void				ft_place_zull(char c, int nb, int i, int j);
+void				ft_order_alph(int *g_order, int g_inc, int i, int j);
 void				ft_remove_pc(void);
 void				ft_move_pc(char *str, int let);
 int					ft_char_str(char *str, char c);
@@ -131,8 +131,6 @@ void				ft_convert(char **alph);
 extern int			g_order[]; // order of the pieces by int
 extern char 		**g_strs;  // cpy of the pcs in string form
 extern char			**g_square; // the array where the final square
-extern int			g_i;       // global increment i
-extern int			g_j;		// global increment j
 extern int			g_base;
 extern int			g_pcs;
 extern int			g_k;
@@ -144,8 +142,5 @@ extern int			g_nbr;
 extern int			g_flag;
 extern int			g_si;
 extern int			g_count;
-extern int			g_x;
-extern int			g_y;
-
 
 #endif

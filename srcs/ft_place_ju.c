@@ -6,16 +6,16 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 06:47:24 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 20:09:12 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 02:01:37 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_place_ju(char c)
+void	ft_place_ju(char c, int i, int j)
 {
-	g_square[g_i][g_j] = c;
-	g_square[g_i + 1][g_j] = c;
-	g_square[g_i + 1][g_j + 1] = c;
-	g_square[g_i + 1][g_j + 2] = c;
+	g_square[i][j] = c;
+	g_square[i + 1][j] = c;
+	g_square[i + 1][j + 1] = c;
+	g_square[i + 1][j + 2] = c;
 }

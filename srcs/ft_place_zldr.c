@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 06:13:06 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/09 13:57:54 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 02:05:29 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@
 ** place Z_L, Z_D, Z_R
 */
 
-void	ft_place_zldr(char c, int nb)
+void	ft_place_zldr(char c, int nb, int i, int j)
 {
 	if (nb == 0)
 	{
-		g_square[g_i][g_j + 1] = c;
-		g_square[g_i][g_j + 2] = c;
-		g_square[g_i + 1][g_j] = c;
-		g_square[g_i + 1][g_j + 1] = c;
+		g_square[i][j + 1] = c;
+		g_square[i][j + 2] = c;
+		g_square[i + 1][j] = c;
+		g_square[i + 1][j + 1] = c;
 	}
 	else if (nb == 1)
 	{
-		g_square[g_i][g_j] = c;
-		g_square[g_i + 1][g_j] = c;
-		g_square[g_i + 1][g_j + 1] = c;
-		g_square[g_i + 2][g_j + 1] = c;
+		g_square[i][j] = c;
+		g_square[i + 1][j] = c;
+		g_square[i + 1][j + 1] = c;
+		g_square[i + 2][j + 1] = c;
 	}
 	else if (nb == 2)
 	{
-		g_square[g_i][g_j] = c;
-		g_square[g_i][g_j + 1] = c;
-		g_square[g_i + 1][g_j + 1] = c;
-		g_square[g_i + 1][g_j + 2] = c;
+		g_square[i][j] = c;
+		g_square[i][j + 1] = c;
+		g_square[i + 1][j + 1] = c;
+		g_square[i + 1][j + 2] = c;
 	}
 }

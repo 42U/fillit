@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/14 23:57:31 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/16 21:22:59 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/18 03:26:02 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ void		fillit(int *g_order, int flag)
 	while (!end) 
 	{
 		g_base += 1;
+		g_flag = 1;
 		ft_need_rm();
-		end = ft_solve(g_order, flag);
+		flag = 0;
+		end = ft_solve(g_order, flag, g_pcs); // changed flag to 0
 		if (end)
 			ft_print_arr();
-		g_flag = 1;
 	}
 }
 
