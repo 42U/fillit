@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 03:25:31 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 04:45:27 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,8 @@ void				ft_place_lrds(char c, int nb, int i, int j);
 void				ft_place_trtl(char c, int nb, int i, int j);
 void				ft_place_zldr(char c, int nb, int i, int j);
 void				ft_place_zull(char c, int nb, int i, int j);
-void				ft_order_alph(int *g_order, int g_inc, int i, int j);
-void				ft_remove_pc(void);
+void				ft_order_alph(int *g_order, int flag, int i, int j);
+void				ft_remove_pc(int flag);
 void				ft_move_pc(char *str, int let);
 int					ft_char_str(char *str, char c);
 void				ft_count_spc(void);

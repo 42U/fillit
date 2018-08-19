@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 01:50:18 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/18 04:04:42 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 04:45:42 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ void	ft_remove_pc(int nb)
 }
 */
 
-void	ft_remove_pc(void)
+void	ft_remove_pc(int flag)
 {
 	int i;
 	int j;
+	char c;
 
-	g_char -= 1;
+	c = 65 + flag;;
 	i = -1;
 	while (++i < g_base)
 	{
 		j = -1;
 		while (++j < g_base)
-			if (g_square[i][j] == g_char)
+			if (g_square[i][j] == c)
 				g_square[i][j] = '.';
-		i++;
 	}
 }

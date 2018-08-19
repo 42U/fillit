@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 02:52:59 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/03 06:56:32 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 04:34:04 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,12 @@ void	ft_print_arr()
 	int i;
 	int j;
 
-	i = 0;
-	while (i < g_base)
+	i = -1;
+	while (++i < g_base)
 	{
-		j = 0;
-		while (j < g_base)
-		{
+		j = -1;
+		while (++j < g_base)
 			ft_putchar(g_square[i][j]);
-			j++;
-		}
 		ft_putchar('\n');
-		i++;
 	}
 }
