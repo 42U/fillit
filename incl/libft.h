@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 07:03:09 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 16:23:16 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,6 @@ extern int			g_nbr;
 extern int			g_flag;
 extern int			g_si;
 extern int			g_count;
+extern int			g_save;
 
 #endif
