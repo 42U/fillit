@@ -6,7 +6,7 @@
 #    By: issmith <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/16 19:52:51 by issmith           #+#    #+#              #
-#    Updated: 2018/08/19 09:38:22 by issmith          ###   ########.fr        #
+#    Updated: 2018/08/19 17:17:16 by issmith          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,9 @@ $(NAME):
 	$(CC) $(CFLAGS) $(SRCS) $(INCL)
 	$(AR) $(LN) $(OBJ)
 	$(RL) $(LN)
-	$(RM) $(OBJ)
 	$(CC) $(FLAG) $(INCL) $(LN) $(MN) -o $(NAME)
-	
+	$(RM) $(LN)
+
 lib:
 	$(CC) $(CFLAGS) $(SRCS) $(INCL)
 	$(AR) $(LN) $(OBJ)
@@ -47,10 +47,10 @@ lib:
 	$(RM) $(OBJ)
 
 clean:
-	$(RM) $(OBJ) a.out* $(NAME)
+	$(RM) $(OBJ)
 
 fclean:	clean
-	$(RM) $(LN) a.out
+	$(RM) $(NAME)
 
 re: fclean all
 

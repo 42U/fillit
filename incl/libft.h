@@ -6,7 +6,7 @@
 /*   By: issmith <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 19:12:01 by issmith           #+#    #+#             */
-/*   Updated: 2018/08/19 16:23:16 by issmith          ###   ########.fr       */
+/*   Updated: 2018/08/19 17:09:11 by issmith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <errno.h>
-
-typedef	struct		s_piece
-{
-	int				i;
-	int				line;
-	int				hash;
-	int				c;
-	int				*tets;
-//	struct s_piece	*next;
-}					t_reg;
 
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -129,9 +119,9 @@ void				ft_count_spc(void);
 void				fillit(int *g_order, int flag);
 void				ft_convert(char **alph);
 
-extern int			g_order[]; // order of the pieces by int
-extern char 		**g_strs;  // cpy of the pcs in string form
-extern char			**g_square; // the array where the final square
+extern int			g_order[];
+extern char			**g_strs;
+extern char			**g_square;
 extern int			g_base;
 extern int			g_pcs;
 extern int			g_k;
